@@ -16,7 +16,7 @@
     width: 95vw;
     height: 50vh;
     
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 
@@ -60,6 +60,16 @@
     width: 40px;
     background-color: rgba(0, 0, 0, 0.6);
 }
+.scrolableSection--invisibleLeftArrow{
+    position: absolute;
+    left: 0;
+    height: 50vh;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+
 
 .scrolableSection__rightArrow{
     position: absolute;

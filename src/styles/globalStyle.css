@@ -350,7 +350,10 @@
 
   *{
       background-color: #11031A;
+      overflow-x: hidden;
   }
+
+  
 
   /* ::-webkit-scrollbar {
     width: px;
