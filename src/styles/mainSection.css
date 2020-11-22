@@ -1,4 +1,183 @@
 .MainSection__container{
+    position: relative;
+
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
+
+.MainSection__coverIMG{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+    user-select: none;
+    z-index: -1;
+}
+
+.MainSection__wrapperInformations{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+    height: 100%;
+
+    background-color: transparent;
+}
+
+.MainSection__movieTitle{
+    width: 70%;
+    margin: 15px 0px 15px 0px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4.5rem;
+    color: #E3D9FF;
+}
+
+.MainSection__movieDesc{
+    width: 70%;
+    margin: 30px 0px 30px 0px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    color: #E3D9FF;
+}
+
+.MainSection__innerOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70%;
+}
+
+.MainSection__watchMovie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+    height: 60px;
+
+    background-color: #11031A;
+    border-style: solid;
+    border-color: #592E83;
+    border-width: 5px;
+    border-radius: 10px;
+
+    outline: none;
+    
+    transition: 0.1s;
+}
+
+.MainSection__watchMovie:active :nth-child(1){
+    transform: translate(-1px, -1px);
+    transition: 0.1s;
+}
+
+.MainSection__btnText{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    color: #E3D9FF;
+}
+
+.MainSection__innerInformations{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: turquoise; */
+}
+
+.MainSection__classification{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainSection__classification > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 10px;
+
+    background-color: #CE9532;
+}
+
+.MainSection__classification > div > p{
+    margin: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    color: #E3D9FF;
+}
+
+.MainSection__classification > p{
+    margin: 5px auto;
+    width: 80%;
+
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    color: #E3D9FF;
+}
+
+.MainSection__watched{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MainSection__watched > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80px;
+    height: 80px;
+
+    border-style: solid;
+    border-color: #11031A;
+    border-width: 6px;
+    border-radius: 70px;
+
+    background-color: #592E83;
+
+}
+
+.MainSection__watched > div > p{
+    margin: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    color: #E3D9FF;
+}
+
+.MainSection__watched > p{
+    margin: 5px auto;
+    width: 80%;
+
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    color: #E3D9FF;
+}
+
+    

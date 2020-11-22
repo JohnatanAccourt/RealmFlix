@@ -348,12 +348,17 @@
     display: none;
   }
 
-  *{
+  body{
       background-color: #11031A;
-      overflow-x: hidden;
   }
 
-  
+  .Shadow__shadow{
+    background-color: #11031A;
+    box-shadow: -4px -50px 10px #11031A;
+    width: 100%;
+    height: 60px;
+    z-index: 2;
+  }
 
   /* ::-webkit-scrollbar {
     width: px;

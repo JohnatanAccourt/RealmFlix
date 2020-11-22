@@ -1,6 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import '../styles/scrolableSection.css';
-import mandalorian from '../images/mandalorian.jpg';
+
+import ArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import ArrowRight from '@material-ui/icons/KeyboardArrowRight';
 
 export default function ScrolableSection(props){
     const myDiv = useRef(null);
@@ -28,136 +30,59 @@ export default function ScrolableSection(props){
             pos = pos + 6;
 
         }
-
-
     }
 
     return (
-        <section className="scrolableSection__container">
-            { leftButtom ? <div className="scrolableSection__leftArrow" onClick={() => comeBackward()}></div> : <div></div> }
-            <div className="scrolableSection__rightArrow" onClick={() => comeForward()}></div>
+        <>
+            <h3 className={props.marginOn ? 'scrolableSection__listTitle' : ' scrolableSection__listTitle scrolableSection--listTitle'}>{props.listTitle}</h3>
+            <section className="scrolableSection__container">
 
-            <div className="scrolableSection__wrapperItens" ref={myDiv}>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/200'} alt="movie img" className="scrolableSection__img"/>
+                { leftButtom ? 
+                <div className="scrolableSection__leftArrow" onClick={() => comeBackward()}>
+                    <ArrowLeft style={{color: "white", fontSize: 35, backgroundColor: 'transparent'}} />
                 </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/200'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/200'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/200'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/200'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/200'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/300'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/300'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/300'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/300'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/300'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/300'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/400'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/400'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/400'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/400'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/400'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/400'} alt="movie img" className="scrolableSection__img"/>
+                : 
+                <div></div> 
+                }
+                <div className="scrolableSection__rightArrow" onClick={() => comeForward()}>
+                    <ArrowRight style={{color: "white", fontSize: 35, backgroundColor: 'transparent'}} />
                 </div>
 
 
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/500'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/500'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/500'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/500'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/500'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/500'} alt="movie img" className="scrolableSection__img"/>
-                </div>
+                <div className="scrolableSection__wrapperItens" ref={myDiv}>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
+                    <div className="scrolableSection__items">
+                        <img src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2/3C0AGhDtCU1kvRJErekyu7PPpyH.jpg'} alt="movie img" className="scrolableSection__img"/>
+                    </div>
 
-
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/600'} alt="movie img" className="scrolableSection__img"/>
                 </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/600'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/600'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/600'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/600'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/600'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-
-
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/700'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/700'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/700'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/700'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/700'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                <div className="scrolableSection__items">
-                    <img src={'https://picsum.photos/700'} alt="movie img" className="scrolableSection__img"/>
-                </div>
-                
-
-                
-            </div>
-        </section>
+            </section>
+        </>
     )
 }
