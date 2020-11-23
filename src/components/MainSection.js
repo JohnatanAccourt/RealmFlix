@@ -1,15 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/mainSection.css';
 import yoda from '../images/bbyoda.jpg';
 
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import Add from '@material-ui/icons/Add';
 
+import YouTube from 'react-youtube';
+
 
 export default function MainSection(){
+    const [banner, setBanner] = useState(true);
+
+    const opts = {
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          controls: 1
+        },
+      };
+
+    useEffect(() => {
+        setTimeout(() => {
+            setBanner(false);
+        }, 3000)
+    }, [])
+
+    function onEndVideo(){
+        setBanner(true);
+    }
+
     return (
         <section className="MainSection__container">
-            <img className="MainSection__coverIMG" src={yoda} alt="img cover"/>
+            {banner ? 
+                <img className="MainSection__coverIMG" src={yoda} alt="img cover"/>
+                :
+                <YouTube 
+                    videoId="aOC8E8z_ifw" 
+                    opts={opts} 
+                    onEnd={() => onEndVideo()} 
+                    className="MainSection__coverIMG" 
+                    containerClassName="MainSection__coverIMG"
+                />
+            }
+
+            
 
             <div className="MainSection__wrapperInformations">
                 <h1 className="MainSection__movieTitle">Mandalorian</h1>
@@ -18,11 +52,11 @@ export default function MainSection(){
                         <PlayArrow style={{color: "#E3D9FF", fontSize: 30 }}/>
                         <p className="MainSection__btnText">Assistir</p>
                     </button>
-
-                    <button className="MainSection__watchMovie">
+                    <button className="MainSection__listMovie">
                         <Add style={{color: "#E3D9FF", fontSize: 30 }}/>
                         <p className="MainSection__btnText">Minha Lista</p>
                     </button>
+
                 </div>
                 <h5 className="MainSection__movieDesc">
                     Um atirador solitário explora os confins da galáxia, longe da autoridade da Nova República.

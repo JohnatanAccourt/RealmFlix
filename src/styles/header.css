@@ -1,3 +1,5 @@
+@import '../styles/keyframes.css';
+
 .Header__container{
     position: fixed;
 
@@ -43,4 +45,10 @@
     font-family: 'Bebas Neue', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
     color: #E3D9FF;
+
+}
+
+#animaIco:hover{
+    animation: hoverIcon 0.6s 0s normal forwards;
+    transition: 1s;
 }

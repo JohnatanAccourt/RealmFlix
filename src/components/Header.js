@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/header.css';
+import '../styles/header.css'; 
 
 import Menu from '@material-ui/icons/Menu';
 import Search from '@material-ui/icons/Search';
@@ -7,10 +7,10 @@ import Search from '@material-ui/icons/Search';
 export default function Header(props){
     
     return (
-        <header className={props.moved ? 'Header__container' : 'Header__container Header--container'}>
+        <header className={props.moved ? 'Header__container' : 'Header__container Header--container'} >
             <div className='Header__wrapper'>
                 <div className='Header__inner'>
-                    <Menu style={{color: "white", fontSize: 35}} />
+                    <Menu id='animaIco' onClick={props.onClick} style={{color: "#E3D9FF", fontSize: 35}} />
                     <p>REALMFLIX</p>
                 </div>
 

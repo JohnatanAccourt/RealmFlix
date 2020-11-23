@@ -1,0 +1,8 @@
+@keyframes hoverIcon{
+    from{
+        transform: rotateZ(0deg);        
+    }
+    to{
+        transform: rotateZ(-10deg);        
+    }
+}

@@ -1,4 +1,4 @@
-.MainSection__container{
+.MainSection__container{ 
     position: relative;
 
     height: 100vh;
@@ -12,6 +12,7 @@
     
     user-select: none;
     z-index: -1;
+    border: none;
 }
 
 .MainSection__wrapperInformations{
@@ -76,12 +77,63 @@
     outline: none;
     
     transition: 0.1s;
+    cursor: pointer;
+}
+
+.MainSection__listMovie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+    height: 60px;
+
+    background-color: #11031A;
+    border-style: solid;
+    border-color: #592E83;
+    border-width: 5px;
+    border-radius: 10px;
+
+    outline: none;
+    
+    transition: 0.1s;
+    cursor: pointer;
 }
 
 .MainSection__watchMovie:active :nth-child(1){
     transform: translate(-1px, -1px);
     transition: 0.1s;
 }
+
+.MainSection__listMovie:active :nth-child(1){
+    transform: translate(-1px, -1px);
+    transition: 0.1s;
+}
+
+
+.MainSection__watchMovie:hover ~ .MainSection__listMovie{
+    display: none;
+}
+
+.MainSection__watchMovie:hover{
+    width: 100%;
+}
+
+.MainSection__listMovie:hover.MainSection__watchMovie{
+    display: none;
+}
+
+.MainSection__listMovie:hover{
+    width: 100%;
+}
+
+
+
+
+
+
+
 
 .MainSection__btnText{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
