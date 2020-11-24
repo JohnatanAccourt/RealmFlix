@@ -3,6 +3,8 @@
 
     height: 100vh;
     width: 100%;
+
+    overflow: hidden;
 }
 
 .MainSection__coverIMG{
@@ -13,6 +15,9 @@
     user-select: none;
     z-index: -1;
     border: none;
+
+    transform: scale(1.1);
+    
 }
 
 .MainSection__wrapperInformations{
@@ -120,7 +125,7 @@
     width: 100%;
 }
 
-.MainSection__listMovie:hover.MainSection__watchMovie{
+.MainSection__listMovie:hover .MainSection__watchMovie{
     display: none;
 }
 

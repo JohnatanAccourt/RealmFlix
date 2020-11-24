@@ -45,7 +45,7 @@
     height: 80vh;
     margin-right: 2px;
 
-    /* background-color: pink; */
+    cursor: pointer;
 
     overflow: hidden;
 }
@@ -79,6 +79,8 @@
     height: 55vh;
     width: 40px;
     background-color: rgba(0, 0, 0, 0.6);
+
+    cursor: pointer;
 }
 .scrolableSection--invisibleLeftArrow{
     position: absolute;
@@ -101,4 +103,6 @@
     height: 55vh;
     width: 40px;
     background-color: rgba(0, 0, 0, 0.6);
+
+    cursor: pointer;
 }

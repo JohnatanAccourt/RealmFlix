@@ -14,7 +14,7 @@ export default function Header(props){
                     <p>REALMFLIX</p>
                 </div>
 
-                <Search style={{color: "white", fontSize: 35}} />
+                <Search style={{color: "white", fontSize: 35, cursor: 'pointer'}} />
             </div>
         </header>
     )

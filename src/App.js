@@ -7,6 +7,7 @@ import Shadow from './components/Shadow';
 import KeepWatching from './components/KeepWatching';
 import ButtomBackUp from './components/ButtomBackUp';
 import DrawerContent from './components/DrawerContent';
+import ChooseOneMovie from './components/ChooseOneMovie';
 
 import { Drawer } from '@material-ui/core';
 
@@ -15,7 +16,7 @@ import './styles/globalStyle.css';
 function App() {
     const [header, setHeader] = useState(true);
     const [backUp, setbackUp] = useState(true);
-    const [drawer, setDrawer] = useState(false);
+    const [drawer, setDrawer] = useState(true);
 
     useEffect(() => {
         window.addEventListener('scroll', changeHeader);
@@ -40,7 +41,11 @@ function App() {
                 moved={header}
                 onClick={() => setDrawer(!drawer)} 
             />
-            <Drawer anchor='left' open={!drawer} onClose={() => setDrawer(!drawer)}>
+            <Drawer 
+                anchor='left'
+                open={!drawer} 
+                onClose={() => setDrawer(!drawer)}
+            >
                 <DrawerContent />
             </Drawer>
 
@@ -55,7 +60,16 @@ function App() {
                 listTitle='Populares do RealmFlix:' 
                 marginOn={false} 
             />
+
+            <ChooseOneMovie />
+            
+            <ScrolableSection
+                listTitle='Populares marcados como Ação:' 
+                marginOn={false} 
+            />
+
             <KeepWatching />
+
 
             <ButtomBackUp
                 buttomShown={backUp}

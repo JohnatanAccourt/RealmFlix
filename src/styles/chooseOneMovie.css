@@ -1,0 +1,197 @@
+.chooseOneMovie__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 95vw;
+    height: 100vh;
+    
+    margin: auto;
+    
+}
+
+.chooseOneMovie__container > h5{
+    margin: 0;
+    margin-top: -100px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #E3D9FF;
+
+}
+
+.chooseOneMovie__container > p{
+    width: 80%;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    color: #E3D9FF;
+}
+
+.chooseOneMovie__wrapperButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 80%;
+}
+
+.chooseOneMovie__wrapperButtons > button{
+    height: 40px;
+    width: 200px;
+
+    background-color: #592E83;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: #E3D9FF;
+    
+    outline: #0B0211;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.ChooseGenre__wrapperArtists{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 3%;
+
+    width: 80%;
+}
+
+.ChooseGenre__wrapperArtists > img{
+    width: 250px;
+    height: 250px;
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ChooseGenre__wrapperArtists > img:hover{
+    border-radius: 250px;
+    transition: 0.5s;
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+
+.ChoosePopularity__wrapperButtons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 40%;
+
+    margin-top: 2%;
+}
+
+.ChoosePopularity__wrapperButtons > button{
+    height: 40px;
+    width: 200px;
+
+    margin-top: 20px;
+
+    background-color: #592E83;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: #E3D9FF;
+    
+    outline: #0B0211;
+    border: none;
+    cursor: pointer;
+}
+
+.ChoosedMovie__wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    width: 80%;
+    margin-top: -3%;
+}
+
+.ChoosedMovie__wrapper > img{
+    width: 25vw;
+    height: 70vh;
+}
+
+.ChoosedMovie__inner{
+    flex-direction: column;
+    width: 60%;
+}
+
+.ChoosedMovie__inner > p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6rem;
+    color: #E3D9FF;
+}
+
+.ChoosedMovie__inner > h1{
+    margin: 3% 0px 0px 0px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #E3D9FF;
+}
+
+.ChoosedMovie__inner > h5{
+    margin: 3% 0px 3% 0px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #E3D9FF;
+}
+
+.ChoosedMovie__buttons{
+    margin-top: 6%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 90%;
+}
+
+.ChoosedMovie__watchMovie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45%;
+    height: 60px;
+
+    margin-left: 2%;
+
+    background-color: #11031A;
+    border-style: solid;
+    border-color: #592E83;
+    border-width: 5px;
+    border-radius: 10px;
+
+    outline: none;
+    
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.ChoosedMovie__watchMovie > p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    color: #E3D9FF;
+}
+
+.red{
+    border-color: red;
+}

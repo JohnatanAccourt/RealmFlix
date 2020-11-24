@@ -12,7 +12,7 @@ export default function DrawerContent(props){
             <div className="DraweContent__wrapperUserInfo">
                 <img src={avatar} alt="user image"/>
                 <p>John Doe</p>
-                <Arrows style={{ fontSize: 50, color: '#E3D9FF'}} />
+                <Arrows style={{ fontSize: 50, color: '#E3D9FF', cursor: 'pointer'}} />
             </div>
 
             <buttom className="DrawerContent__wrapperButtons">

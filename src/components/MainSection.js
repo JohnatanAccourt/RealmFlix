@@ -22,7 +22,7 @@ export default function MainSection(){
     useEffect(() => {
         setTimeout(() => {
             setBanner(false);
-        }, 3000)
+        }, 1500)
     }, [])
 
     function onEndVideo(){
@@ -42,9 +42,6 @@ export default function MainSection(){
                     containerClassName="MainSection__coverIMG"
                 />
             }
-
-            
-
             <div className="MainSection__wrapperInformations">
                 <h1 className="MainSection__movieTitle">Mandalorian</h1>
                 <div className="MainSection__innerOptions">

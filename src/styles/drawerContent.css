@@ -40,6 +40,8 @@
     /* background-color: rosybrown; */
     margin-top: 10px;
     margin-bottom: 20px;
+
+    cursor: pointer;
 }
 
 .DrawerContent__wrapperButtons > div{
