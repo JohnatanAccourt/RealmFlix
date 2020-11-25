@@ -106,3 +106,128 @@
 
     cursor: pointer;
 }
+
+@media(max-width: 1200px){
+
+    .scrolableSection__container, 
+    .scrolableSection__wrapperItens,
+    .scrolableSection__leftArrow,
+    .scrolableSection__rightArrow{
+        height: 50vh;
+    }
+
+    .scrolableSection__items{
+        width: 200px;
+        height: 50vh;
+    }
+}
+
+@media(max-width: 1060px){
+
+    .scrolableSection__container, 
+    .scrolableSection__wrapperItens,
+    .scrolableSection__leftArrow,
+    .scrolableSection__rightArrow{
+        height: 45vh;
+    }
+
+    .scrolableSection__items{
+        width: 180px;
+        height: 45vh;
+    }
+}
+
+@media(max-width: 960px){
+
+    .scrolableSection__container, 
+    .scrolableSection__wrapperItens,
+    .scrolableSection__leftArrow,
+    .scrolableSection__rightArrow{
+        height: 40vh;
+    }
+
+    .scrolableSection__items{
+        width: 160px;
+        height: 40vh;
+    }
+}
+
+@media(max-width: 850px){
+
+    .scrolableSection__container, 
+    .scrolableSection__wrapperItens,
+    .scrolableSection__leftArrow,
+    .scrolableSection__rightArrow{
+        height: 35vh;
+    }
+
+    .scrolableSection__items{
+        width: 140px;
+        height: 35vh;
+    }
+}
+
+@media(max-width: 750px){
+
+    .scrolableSection__container, 
+    .scrolableSection__wrapperItens,
+    .scrolableSection__leftArrow,
+    .scrolableSection__rightArrow{
+        height: 30vh;
+    }
+
+    .scrolableSection__items{
+        width: 120px;
+        height: 30vh;
+    }
+}
+
+@media(max-width: 650px){
+
+    .scrolableSection__container, 
+    .scrolableSection__wrapperItens,
+    .scrolableSection__leftArrow,
+    .scrolableSection__rightArrow{
+        height: 25vh;
+    }
+
+    .scrolableSection__items{
+        width: 100px;
+        height: 25vh;
+    }
+}
+
+@media(max-width: 550px){
+
+    .scrolableSection__container, 
+    .scrolableSection__wrapperItens,
+    .scrolableSection__leftArrow,
+    .scrolableSection__rightArrow{
+        height: 20vh;
+    }
+
+    .scrolableSection__items{
+        width: 80px;
+        height: 20vh;
+    }
+
+    .scrolableSection__leftArrow,
+    .scrolableSection__rightArrow{
+        width: 25px;
+    }
+}
+
+@media(max-width: 450px){
+
+    .scrolableSection__container, 
+    .scrolableSection__wrapperItens,
+    .scrolableSection__leftArrow,
+    .scrolableSection__rightArrow{
+        height: 15vh;
+    }
+
+    .scrolableSection__items{
+        width: 60px;
+        height: 15vh;
+    }
+}

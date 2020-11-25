@@ -9,6 +9,29 @@
 
 .MainSection__coverIMG{
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    
+    user-select: none;
+    z-index: -1;
+    border: none;
+
+    transform: scale(1.1);
+    
+}
+
+.MainSection__coverVideo{
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     height: 100%;
     width: 100%;
     
@@ -238,3 +261,26 @@
 }
 
     
+@media(max-width: 800px){
+    .MainSection__coverIMG{
+        height: 100%;
+        width: 170%;
+    }
+
+    .MainSection__coverVideo{
+        transform: scale(1.7);
+    }
+
+    .MainSection__innerInformations{
+        display: none;
+    }
+
+    .MainSection__wrapperInformations{
+        width: 100%;
+    }
+
+    .MainSection__movieTitle{
+        width: 100%;
+        text-align: center
+    }
+}

@@ -38,8 +38,8 @@ export default function MainSection(){
                     videoId="aOC8E8z_ifw" 
                     opts={opts} 
                     onEnd={() => onEndVideo()} 
-                    className="MainSection__coverIMG" 
-                    containerClassName="MainSection__coverIMG"
+                    className="MainSection__coverVideo" 
+                    containerClassName="MainSection__coverVideo"
                 />
             }
             <div className="MainSection__wrapperInformations">
