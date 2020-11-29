@@ -11,6 +11,8 @@ import ChooseOneMovie from './components/ChooseOneMovie';
 
 import { Drawer } from '@material-ui/core';
 
+import axios from 'axios';
+
 import './styles/globalStyle.css';
 
 function App() {
@@ -18,11 +20,23 @@ function App() {
     const [backUp, setbackUp] = useState(true);
     const [drawer, setDrawer] = useState(true);
 
+    const [info, setInformation] = useState([]);
+    
+    useEffect(async () => {
+        await axios.get('https://api.themoviedb.org/3/discover/movie?api_key=1c7242f856ed0a3790d9817ddbc70e67&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1')
+        .then((res) => {
+            console.log(res.data.results);
+            setInformation(res.data.results);
+        })
+        .catch(err => console.log(err))
+
+    }, [])
+    
     useEffect(() => {
         window.addEventListener('scroll', changeHeader);
         return () => window.removeEventListener('scroll', changeHeader);
-
     }, [])
+
 
     function changeHeader(){
         const pos = window.scrollY;
@@ -54,11 +68,14 @@ function App() {
 
             <ScrolableSection
                 listTitle='Novidades do RealmFlix:' 
-                marginOn={true} 
+                marginOn={true}
+                data={info}
             />
+
             <ScrolableSection
                 listTitle='Populares do RealmFlix:' 
                 marginOn={false} 
+                data={info}
             />
 
             <ChooseOneMovie />
@@ -66,6 +83,7 @@ function App() {
             <ScrolableSection
                 listTitle='Populares marcados como Ação:' 
                 marginOn={false} 
+                data={info}
             />
 
             <KeepWatching />
